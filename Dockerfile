@@ -1,6 +1,6 @@
 FROM golang:latest
 
-RUN go build .
-
-EXPOSE 8000
+COPY ./main.go /opt
+RUN cd /opt && go mod tidy && go build ./main.go
+EXPOSE 54321
 ENTRYPOINT ["./go2docker"]
