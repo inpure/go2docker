@@ -20,7 +20,7 @@ func main() {
 		Use:   "greet",
 		Short: "name",
 		Long:  "greet name",
-		Args:  cobra.MinimumNArgs(1),
+		//Args:  cobra.MinimumNArgs(1),
 		Run: func(cmd *cobra.Command, args []string) {
 			for i := 0; i < times; i++ {
 				log.Println("Hello " + name)
