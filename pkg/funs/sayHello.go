@@ -1,13 +1,13 @@
-package hello
+package funs
 
 import (
 	"log"
 	"time"
 )
 
-func LoopSay(name string, pause int) {
+func LoopSay(name string, interval int) {
 	for {
 		log.Println("Hello " + name)
-		time.Sleep(time.Duration(pause) * time.Second)
+		time.Sleep(time.Duration(interval) * time.Second)
 	}
 }

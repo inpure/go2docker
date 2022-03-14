@@ -2,7 +2,7 @@ package cmd
 
 import "github.com/spf13/cobra"
 
-var rootCmd = &cobra.Command{Use: "hello"}
+var rootCmd = &cobra.Command{Use: "funs"}
 
 func init() {
 	rootCmd.AddCommand(cmdGreet)

@@ -1,12 +1,9 @@
 package cmd
 
 import (
-	"github.com/inpure/go2docker/pkg/hello"
+	"github.com/inpure/go2docker/pkg/funs"
 	"github.com/spf13/cobra"
 )
-
-var pause int
-var name string
 
 var cmdGreet = &cobra.Command{
 	Use:   "greet",
@@ -14,11 +11,11 @@ var cmdGreet = &cobra.Command{
 	Long:  "greet name",
 	//Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		go hello.LoopSay(name, pause)
+		go funs.LoopSay(name, interval)
 	},
 }
 
 func init() {
-	cmdGreet.Flags().IntVar(&pause, "p", 1, "pause time，default 1s")
+	cmdGreet.Flags().IntVar(&interval, "i", 1, "interval time，default 1s")
 	cmdGreet.Flags().StringVar(&name, "n", "World", "name，default \"World\"")
 }
