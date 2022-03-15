@@ -16,10 +16,10 @@ func handleSession(conn net.Conn) {
 	//Receive data, handle with sayHello
 	str, err := reader.ReadString('\n')
 	if err == nil {
-		str = strings.TrimSpace(str) // split string with space
-		strArray := strings.Fields(str)
+		str = strings.TrimSpace(str)
+		strArray := strings.Fields(str)     // split string with space
 		n := strArray[0]                    // name
-		i, err := strconv.Atoi(strArray[1]) //interval
+		i, err := strconv.Atoi(strArray[1]) // interval
 		if err == nil {
 			LoopSay(n, i) //say hello
 		}

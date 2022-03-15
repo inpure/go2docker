@@ -8,7 +8,7 @@ import (
 func Server(addr string) {
 	serv, err := net.Listen("tcp", addr)
 	if err != nil {
-		log.Fatalln(err)
+		log.Fatalln(err) //print err and quit
 	}
 	defer serv.Close()
 
