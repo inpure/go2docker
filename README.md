@@ -1,2 +1,2 @@
 # go2docker
-练习使用 docker 部署 go 应用程序
+学习使用 go 语言，创建一个 say hello 功能的服务端
